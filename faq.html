@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veelgestelde vragen — RitLog</title>
+  <meta name="theme-color" content="#1c1c1e">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    :root{--bg:#1c1c1e;--card:rgba(255,255,255,0.08);--card-h:rgba(255,255,255,0.12);--brd:rgba(255,255,255,0.12);--brd-g:rgba(255,255,255,0.18);--t1:#f5f5f7;--t2:rgba(245,245,247,0.65);--t3:rgba(245,245,247,0.45);--acc:#e8832a;--acc-g:rgba(232,131,42,0.3);--acc-s:rgba(232,131,42,0.15);--green:#34c759;--pink:#ff6b8a;--blue:#007aff}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg);color:var(--t1);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    @keyframes dr{0%,100%{transform:translate(0,0)}50%{transform:translate(40px,20px)}}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 2rem;background:rgba(28,28,30,0.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--brd)}
+    .ni{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+    .nl{font-size:1.25rem;font-weight:700;letter-spacing:-0.02em;color:var(--t1);text-decoration:none;display:flex;align-items:center;gap:0.5rem;cursor:pointer}
+    .li{width:32px;height:32px;background:linear-gradient(135deg,var(--acc),#c66a1a);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:0.85rem}
+    .nk{display:flex;gap:1.5rem;align-items:center}
+    .nk a{color:var(--t2);text-decoration:none;font-size:0.9rem;font-weight:400;transition:color 0.2s;cursor:pointer}
+    .nk a:hover{color:var(--t1)}
+    .lb{color:var(--t3);font-size:0.8rem;cursor:pointer;padding:0.3rem 0.7rem;border:1px solid var(--brd);border-radius:6px;transition:all 0.2s;background:transparent;font-family:inherit}
+    .lb:hover{color:var(--t2);border-color:var(--brd-g)}
+    section{padding:6rem 2rem}.con{max-width:1100px;margin:0 auto}
+    .hero{min-height:100vh;display:flex;align-items:center;padding-top:5rem}
+    .hc{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+    .ht{max-width:540px}
+
+    .hero h1{font-size:clamp(2.5rem,5vw,3.8rem);font-weight:700;letter-spacing:-0.03em;line-height:1.1;margin-bottom:1.5rem}
+    .hero h1 span{background:linear-gradient(135deg,var(--acc),#f0a060);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .hero p{font-size:1.15rem;color:var(--t2);line-height:1.7;margin-bottom:2rem;max-width:460px}
+    .cta{display:inline-flex;align-items:center;gap:0.6rem;padding:0.9rem 2rem;background:var(--blue);color:white;text-decoration:none;border-radius:12px;font-weight:600;font-size:1rem;transition:all 0.3s ease;box-shadow:0 4px 20px rgba(0,122,255,0.3)}
+    .cta:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,122,255,0.35)}
+    .hv{display:flex;justify-content:center;align-items:center}
+    .pm{width:280px;height:560px;background:linear-gradient(145deg,#2c2c2e,#1c1c1e);border-radius:40px;border:2px solid var(--brd-g);padding:12px;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.4),0 0 0 1px rgba(255,255,255,0.08),inset 0 1px 0 rgba(255,255,255,0.08)}
+    .ps{width:100%;height:100%;background:linear-gradient(180deg,#1c1c1e 0%,#2c2c2e 50%,#1c1c1e 100%);border-radius:30px;overflow:hidden;display:flex;flex-direction:column;padding:2.5rem 1.2rem 1.2rem}
+    .pn{position:absolute;top:12px;left:50%;transform:translateX(-50%);width:100px;height:28px;background:#000;border-radius:0 0 16px 16px;z-index:2}
+    .mh{text-align:center;margin-bottom:1.2rem}.mh h3{font-size:1.1rem;font-weight:600;margin-bottom:0.2rem}.mh p{font-size:0.65rem;color:var(--t3)}
+    .msr{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-bottom:0.8rem}
+    .ms{background:var(--card);border:1px solid var(--brd);border-radius:12px;padding:0.7rem;text-align:center}
+    .ms .v{font-size:1.1rem;font-weight:700;color:var(--acc)}.ms .l{font-size:0.55rem;color:var(--t3);text-transform:uppercase;letter-spacing:0.05em}
+    .mt{background:var(--card);border:1px solid var(--brd);border-radius:12px;padding:0.7rem;margin-bottom:0.5rem}
+    .mr{display:flex;align-items:center;gap:0.5rem;margin-bottom:0.3rem}
+    .md{width:6px;height:6px;border-radius:50%;background:var(--green);flex-shrink:0}.md.ho{background:transparent;border:1.5px solid var(--pink)}
+    .mn{font-size:0.72rem;font-weight:500}.mm{font-size:0.58rem;color:var(--t3);padding-left:1rem}
+    .tb{margin-top:auto;display:flex;justify-content:space-around;padding:0.6rem 0 0.2rem;border-top:1px solid var(--brd)}
+    .ta{font-size:0.5rem;color:var(--t3);text-align:center}.ta.ac{color:var(--acc)}
+    .ti{width:18px;height:18px;margin:0 auto 2px;border-radius:4px;background:var(--brd)}.ta.ac .ti{background:var(--acc-s)}
+    .fg{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+    .fc{background:var(--card);border:1px solid var(--brd);border-radius:16px;padding:2rem;transition:all 0.3s ease}
+    .fc:hover{background:var(--card-h);border-color:var(--brd-g);transform:translateY(-2px)}
+    .fi{width:44px;height:44px;border-radius:12px;background:var(--acc-s);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:1.2rem}
+    .fc h3{font-size:1.05rem;font-weight:600;margin-bottom:0.6rem}.fc p{font-size:0.9rem;color:var(--t2);line-height:1.6}
+    .sl{font-size:0.8rem;font-weight:500;color:var(--acc);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.75rem}
+    .st{font-size:clamp(1.8rem,3vw,2.4rem);font-weight:700;letter-spacing:-0.02em;margin-bottom:1rem}
+    .sd{font-size:1.05rem;color:var(--t2);max-width:600px;line-height:1.7}
+    .stp{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem}
+    .sp{text-align:center;padding:2rem}
+    .sn{font-family:'JetBrains Mono',monospace;font-size:3rem;font-weight:400;color:var(--acc);opacity:0.3;margin-bottom:1rem}
+    .sp h3{font-size:1.1rem;font-weight:600;margin-bottom:0.5rem}.sp p{font-size:0.9rem;color:var(--t2);line-height:1.6}
+    .lp{padding-top:8rem}.lc{max-width:720px;margin:0 auto}
+    .lc h1{font-size:2rem;font-weight:700;margin-bottom:0.5rem;letter-spacing:-0.02em}
+    .lc .lu{font-size:0.85rem;color:var(--t3);margin-bottom:2.5rem}
+    .lc h2{font-size:1.2rem;font-weight:600;margin-top:2.5rem;margin-bottom:0.75rem}
+    .lc h3{font-size:1.05rem;font-weight:600;margin-top:1.5rem;margin-bottom:0.5rem;color:var(--t1)}
+    .lc p,.lc li{font-size:0.95rem;color:var(--t2);line-height:1.75;margin-bottom:0.75rem}
+    .lc ul{list-style:none;padding-left:0}.lc ul li::before{content:'—';color:var(--acc);margin-right:0.6rem}
+    .lc a{color:var(--acc);text-decoration:none;cursor:pointer}.lc a:hover{text-decoration:underline}
+    .sc{background:var(--card);border:1px solid var(--brd);border-radius:16px;padding:2.5rem;max-width:600px;margin-top:2rem}
+    .sc a{color:var(--acc);text-decoration:none;font-weight:500}.sc a:hover{text-decoration:underline}
+    footer{padding:3rem 2rem;border-top:1px solid var(--brd)}
+    .fti{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+    .ftl{font-size:0.85rem;color:var(--t3)}
+    .fk{display:flex;gap:1.5rem}.fk a{font-size:0.85rem;color:var(--t3);text-decoration:none;transition:color 0.2s;cursor:pointer}.fk a:hover{color:var(--t2)}
+    .pg{display:none}.pg.ac{display:block}
+    .faq-section{margin-top:1.5rem}
+    .faq-section h2{font-size:1.1rem;font-weight:600;margin-top:2rem;margin-bottom:0.5rem;color:var(--acc);padding-bottom:0.3rem;border-bottom:1px solid var(--brd)}
+    .faq-item{border-bottom:1px solid var(--brd)}
+    .faq-q{display:flex;justify-content:space-between;align-items:center;padding:0.9rem 0;cursor:pointer;font-size:0.95rem;font-weight:500;color:var(--t1);gap:1rem}
+    .faq-q:hover{color:var(--acc)}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--t3);flex-shrink:0;transition:transform 0.2s}
+    .faq-item.open .faq-q::after{content:'−'}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height 0.3s ease}
+    .faq-item.open .faq-a{max-height:500px}
+    .faq-a p{font-size:0.9rem;color:var(--t2);line-height:1.7;padding:0 0 0.9rem 0;margin:0}
+    .cta-wrap{display:flex;flex-direction:column;align-items:center}
+    .scroll-hint{display:flex;flex-direction:column;align-items:center;gap:0.3rem;margin-top:2.5rem;cursor:pointer;animation:hintFade 2.5s ease-in-out infinite;color:var(--t2);transition:color 0.2s}
+    .scroll-hint:hover{color:var(--t2)}
+    .scroll-hint-text{font-size:0.85rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase}
+    .scroll-hint-arrow{animation:bounce 2s ease-in-out infinite}
+    @keyframes hintFade{0%,100%{opacity:0.5}50%{opacity:1}}
+    @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(4px)}}
+    .carousel{position:relative;display:flex;flex-direction:column;align-items:center}
+    .car-slide{display:none}
+    .car-slide.car-active{display:block}
+    .screen-img{width:280px;height:auto;border-radius:32px;box-shadow:0 20px 60px rgba(0,0,0,0.4),0 0 0 1px rgba(255,255,255,0.08)}
+    .car-dots{display:flex;gap:0.5rem;margin-top:1.2rem;justify-content:center}
+    .car-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.2);cursor:pointer;transition:all 0.2s}
+    .car-dot.car-dot-active{background:var(--blue);width:20px;border-radius:4px}
+    @media(max-width:768px){.hc{grid-template-columns:1fr;gap:3rem;text-align:center}.hero p{margin-left:auto;margin-right:auto}.fg{grid-template-columns:1fr}.stp{grid-template-columns:1fr;gap:1rem}.nk{gap:1rem}.nk a{font-size:0.8rem}.fti{flex-direction:column;gap:1rem;text-align:center}section{padding:4rem 1.5rem}.screen-img{width:240px}}
+    @media(max-width:480px){.nk{gap:0.7rem}.screen-img{width:200px}}
+  </style>
+</head>
+<body>
+<div class="amb"></div>
+<nav><div class="ni">
+  <a class="nl" href="/"><img src="app-icon.png" alt="RitLog" style="width:32px;height:32px;border-radius:8px;">RitLog</a>
+  <div class="nk">
+    <a href="/privacy.html">Privacy</a>
+    <a href="/faq.html">FAQ</a>
+    <a href="/support.html">Support</a>
+    <button class="lb" onclick="toggleLang()" id="langBtn">NL</button>
+  </div>
+</div></nav>
+<section class="lp"><div class="con"><div class="lc">
+<h1>Veelgestelde vragen</h1><p class="lu">RitLog — Alles wat je wilt weten</p><div class="faq-section"><h2>Ritten</h2><div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">Hoe registreer ik een rit?</div><div class="faq-a"><p>Tik op de knop "Rit registreren" onderaan het scherm. Vul de vertrek- en aankomstlocatie, afstand en categorie in. RitLog vult waar mogelijk automatisch gegevens aan op basis van eerdere ritten.</p></div></div><div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">Kan ik een eerder ingevoerde rit nog aanpassen?</div><div class="faq-a"><p>Ja. Tik op een rit in het overzicht om deze te bewerken. Je kunt alle gegevens wijzigen, inclusief locaties, afstand, categorie en rijtijden.</p></div></div><div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">Wat zijn categorieën en hoe gebruik ik ze?</div><div class="faq-a"><p>Met categorieën geef je aan of een rit zakelijk of privé is, of een andere door jou gekozen categorie. Je kunt categorieën zelf aanmaken, een naam geven en een kleur toewijzen. Dit maakt het eenvoudig om je ritten te filteren en te exporteren.</p></div></div><div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">Wat doet de automatische categorie-suggestie?</div><div class="faq-a"><p>RitLog leert van je ritgeschiedenis. Als je dezelfde route vaker met dezelfde categorie rijdt, wordt die categorie automatisch voorgesteld bij een nieuwe rit op dezelfde route.</p></div></div><div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">Wat betekent de oranje waarschuwing op een ritkaart?</div><div class="faq-a"><p>Dit geeft aan dat de kilometerstand van deze rit niet aansluit op de vorige rit. Zo kun je eenvoudig ontbrekende ritten opsporen.</p></div></div><div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">Hoe werken de rijtijden?</div><div class="faq-a"><p>Je kunt een vertrek- en aankomsttijd invullen bij een rit. Als je de aankomsttijd aanpast, wordt de vertrektijd automatisch mee berekend op basis van de geschatte reistijd, en andersom.</p></div></div><div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">Kan ik ritten filteren op categorie of periode?</div><div class="faq-a"><p>Ja. In het rittenoverzicht kun je filteren op categorie en tijdperiode. De filters worden automatisch gereset als je naar een ander tabblad wisselt.</p></div></div></div><div class="faq-section"><h2>Locaties</h2><div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">Hoe voeg ik een locatie toe?</div><div class="faq-a"><p>Ga naar Locaties in de instellingen en tik op de plusknop. Je kunt een naam, adres en categorie invullen. RitLog gebruikt deze locaties om ritten sneller in te vullen.</p></div></div><div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">Kan ik locaties importeren uit mijn contactenlijst?</div><div class="faq-a"><p>Ja. Via de importfunctie kun je adressen uit je contactenlijst overnemen als locatie in RitLog.</p></div></div><div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">Waarvoor dienen locatiecategorieën?</div><div class="faq-a"><p>Locatiecategorieën helpen je locaties te ordenen (bijv. "Klant", "Kantoor"). Ze worden ook gebruikt voor automatische suggesties bij het registreren van ritten.</p></div></div></div><div class="faq-section"><h2>Ritregistratie-herinneringen</h2><div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">Wat zijn ritregistratie-herinneringen?</div><div class="faq-a"><p>RitLog kan je een herinnering sturen om een rit te registreren wanneer je aankomt bij of vertrekt van een opgeslagen locatie. Dit werkt automatisch op de achtergrond.</p></div></div><div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">Hoe betrouwbaar zijn de herinneringen?</div><div class="faq-a"><p>De herinneringen werken op basis van je GPS-locatie. Omdat GPS niet altijd 100% nauwkeurig is, kan het voorkomen dat je een herinnering ontvangt terwijl je alleen langsrijdt, of juist geen herinnering krijgt bij aankomst. In de praktijk werkt het in de meeste gevallen goed, maar het is niet foutloos.</p></div></div><div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">Krijg ik een herinnering als ik fiets of loop?</div><div class="faq-a"><p>Nee. RitLog probeert te detecteren of je fietst of loopt en stuurt in dat geval geen herinnering. Dit werkt in de meeste situaties, maar is niet altijd gegarandeerd.</p></div></div><div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">Hoe vaak krijg ik een herinnering voor dezelfde locatie?</div><div class="faq-a"><p>Maximaal een keer per 12 uur per locatie. Als je al een rit hebt geregistreerd voor die locatie, krijg je geen herinnering meer.</p></div></div></div><div class="faq-section"><h2>Kosten</h2><div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">Welke kosten kan ik registreren?</div><div class="faq-a"><p>Je kunt tankbeurten (of laadbeurten voor elektrische auto's) en overige voertuigkosten registreren. Bij overige kosten kun je zelf een label kiezen, zoals "Verzekering", "Onderhoud" of "Wegenbelasting".</p></div></div><div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">Hoe registreer ik een tankbeurt?</div><div class="faq-a"><p>Tik op de euroknop onderaan het scherm en kies "Tanken". Vul het bedrag en de datum in. Bij een elektrische auto wordt de optie "Volledig getankt" automatisch verborgen.</p></div></div><div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">Kan ik kosten achteraf bewerken of verwijderen?</div><div class="faq-a"><p>Ja. Ga naar het kostenoverzicht (bereikbaar via de kostenregel op het startscherm). Tik op een kostenregel om te bewerken, of veeg naar links om te verwijderen.</p></div></div><div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">Kan ik kiezen welke kosten ik in het overzicht zie?</div><div class="faq-a"><p>Ja. In de instellingen kun je kiezen of je alle kosten wilt zien, of alleen tankbeurten/laadbeurten. Dit werkt door in het startscherm, de statistieken en de PDF-export.</p></div></div></div><div class="faq-section"><h2>Kilometerstand</h2><div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">Hoe werkt de kilometerstandregistratie?</div><div class="faq-a"><p>Bij elke rit kun je de kilometerstand invullen. RitLog geeft automatisch een suggestie op basis van je vorige rit. Als de stand niet aansluit, krijg je een waarschuwing.</p></div></div><div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">Moet ik de kilometerstand altijd invullen?</div><div class="faq-a"><p>Nee, het is optioneel. Maar het helpt bij een nauwkeurige administratie en maakt het makkelijker om ontbrekende ritten te signaleren.</p></div></div></div><div class="faq-section"><h2>Kilometervergoeding</h2><div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">Hoe werkt de kilometervergoeding?</div><div class="faq-a"><p>Je stelt een tarief per kilometer in via de instellingen. RitLog berekent automatisch de vergoeding per rit en toont het totaal in de statistieken en exports.</p></div></div></div><div class="faq-section"><h2>Werkschema</h2><div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">Wat doet het werkschema?</div><div class="faq-a"><p>Je kunt je werkdagen en -tijden instellen. RitLog gebruikt dit om automatisch een categorie voor te stellen bij nieuwe ritten. Rijd je tijdens werktijd, dan wordt bijvoorbeeld "Zakelijk" voorgesteld.</p></div></div></div><div class="faq-section"><h2>Statistieken</h2><div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">Welke statistieken biedt RitLog?</div><div class="faq-a"><p>Het statistiekenscherm toont een overzicht met verdeling per categorie (inclusief aantal ritten), hoogtepunten, ritten per weekdag, kilometers per maand, kilometervergoeding en voertuigkosten. De weergave past zich aan op basis van je kosteninstelling.</p></div></div></div><div class="faq-section"><h2>Export en backup</h2><div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">In welke formaten kan ik exporteren?</div><div class="faq-a"><p>Je kunt je ritten exporteren als CSV-bestand (voor spreadsheets) of als PDF-rapport. De PDF komt exact overeen met wat je in de statistieken ziet.</p></div></div><div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">Kan ik filteren wat ik exporteer?</div><div class="faq-a"><p>Ja. Bij het exporteren kun je filteren op categorie, periode en labels. Zo exporteer je precies de gegevens die je nodig hebt, bijvoorbeeld voor je boekhouder.</p></div></div><div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">Hoe werkt de automatische backup?</div><div class="faq-a"><p>RitLog maakt elk kwartaal automatisch een backup van je ritten als CSV-bestand. Dit bestand wordt bewaard op je apparaat.</p></div></div><div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">Kan ik een herinnering instellen om te exporteren?</div><div class="faq-a"><p>Ja. In de instellingen kun je een wekelijkse of maandelijkse herinnering instellen om je ritten te exporteren.</p></div></div></div><div class="faq-section"><h2>Voertuig</h2><div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">Welke voertuiggegevens kan ik invullen?</div><div class="faq-a"><p>Je kunt de naam van je voertuig, het kenteken en het brandstoftype instellen (benzine, diesel, LPG, elektrisch of hybride).</p></div></div></div><div class="faq-section"><h2>Instellingen en overig</h2><div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">Hoe werkt de onboarding?</div><div class="faq-a"><p>Bij het eerste gebruik doorloop je drie korte stappen: een welkomstscherm, het toevoegen van je eerste locaties, en het instellen van automatische herinneringen. Je kunt deze stappen ook overslaan.</p></div></div><div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">Is RitLog beschikbaar voor Android?</div><div class="faq-a"><p>Nee, RitLog is momenteel alleen beschikbaar voor iPhone (iOS).</p></div></div><div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">Worden mijn gegevens gedeeld met derden?</div><div class="faq-a"><p>Nee. Al je gegevens worden lokaal op je iPhone opgeslagen. Lees ons <a href="/privacy.html">privacybeleid</a> voor meer informatie.</p></div></div></div>
+</div></div></section>
+<footer><div class="fti">
+  <div class="ftl">&copy; 2026 RitLog · Jeroen Gunning</div>
+  <div class="fk">
+    <a href="/privacy.html">Privacy</a>
+    <a href="/faq.html">FAQ</a>
+    <a href="/support.html">Support</a>
+    <a href="mailto:support@ritlog.com">Contact</a>
+  </div>
+</div></footer>
+<script>document.querySelectorAll(".faq-item").forEach(function(el){el.addEventListener("click",function(){this.classList.toggle("open")})});</script>
+</body>
+</html>

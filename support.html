@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support — RitLog</title>
+  <meta name="theme-color" content="#1c1c1e">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    :root{--bg:#1c1c1e;--card:rgba(255,255,255,0.08);--card-h:rgba(255,255,255,0.12);--brd:rgba(255,255,255,0.12);--brd-g:rgba(255,255,255,0.18);--t1:#f5f5f7;--t2:rgba(245,245,247,0.65);--t3:rgba(245,245,247,0.45);--acc:#e8832a;--acc-g:rgba(232,131,42,0.3);--acc-s:rgba(232,131,42,0.15);--green:#34c759;--pink:#ff6b8a;--blue:#007aff}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg);color:var(--t1);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    @keyframes dr{0%,100%{transform:translate(0,0)}50%{transform:translate(40px,20px)}}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 2rem;background:rgba(28,28,30,0.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--brd)}
+    .ni{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+    .nl{font-size:1.25rem;font-weight:700;letter-spacing:-0.02em;color:var(--t1);text-decoration:none;display:flex;align-items:center;gap:0.5rem;cursor:pointer}
+    .li{width:32px;height:32px;background:linear-gradient(135deg,var(--acc),#c66a1a);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:0.85rem}
+    .nk{display:flex;gap:1.5rem;align-items:center}
+    .nk a{color:var(--t2);text-decoration:none;font-size:0.9rem;font-weight:400;transition:color 0.2s;cursor:pointer}
+    .nk a:hover{color:var(--t1)}
+    .lb{color:var(--t3);font-size:0.8rem;cursor:pointer;padding:0.3rem 0.7rem;border:1px solid var(--brd);border-radius:6px;transition:all 0.2s;background:transparent;font-family:inherit}
+    .lb:hover{color:var(--t2);border-color:var(--brd-g)}
+    section{padding:6rem 2rem}.con{max-width:1100px;margin:0 auto}
+    .hero{min-height:100vh;display:flex;align-items:center;padding-top:5rem}
+    .hc{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+    .ht{max-width:540px}
+
+    .hero h1{font-size:clamp(2.5rem,5vw,3.8rem);font-weight:700;letter-spacing:-0.03em;line-height:1.1;margin-bottom:1.5rem}
+    .hero h1 span{background:linear-gradient(135deg,var(--acc),#f0a060);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .hero p{font-size:1.15rem;color:var(--t2);line-height:1.7;margin-bottom:2rem;max-width:460px}
+    .cta{display:inline-flex;align-items:center;gap:0.6rem;padding:0.9rem 2rem;background:var(--blue);color:white;text-decoration:none;border-radius:12px;font-weight:600;font-size:1rem;transition:all 0.3s ease;box-shadow:0 4px 20px rgba(0,122,255,0.3)}
+    .cta:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,122,255,0.35)}
+    .hv{display:flex;justify-content:center;align-items:center}
+    .pm{width:280px;height:560px;background:linear-gradient(145deg,#2c2c2e,#1c1c1e);border-radius:40px;border:2px solid var(--brd-g);padding:12px;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.4),0 0 0 1px rgba(255,255,255,0.08),inset 0 1px 0 rgba(255,255,255,0.08)}
+    .ps{width:100%;height:100%;background:linear-gradient(180deg,#1c1c1e 0%,#2c2c2e 50%,#1c1c1e 100%);border-radius:30px;overflow:hidden;display:flex;flex-direction:column;padding:2.5rem 1.2rem 1.2rem}
+    .pn{position:absolute;top:12px;left:50%;transform:translateX(-50%);width:100px;height:28px;background:#000;border-radius:0 0 16px 16px;z-index:2}
+    .mh{text-align:center;margin-bottom:1.2rem}.mh h3{font-size:1.1rem;font-weight:600;margin-bottom:0.2rem}.mh p{font-size:0.65rem;color:var(--t3)}
+    .msr{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-bottom:0.8rem}
+    .ms{background:var(--card);border:1px solid var(--brd);border-radius:12px;padding:0.7rem;text-align:center}
+    .ms .v{font-size:1.1rem;font-weight:700;color:var(--acc)}.ms .l{font-size:0.55rem;color:var(--t3);text-transform:uppercase;letter-spacing:0.05em}
+    .mt{background:var(--card);border:1px solid var(--brd);border-radius:12px;padding:0.7rem;margin-bottom:0.5rem}
+    .mr{display:flex;align-items:center;gap:0.5rem;margin-bottom:0.3rem}
+    .md{width:6px;height:6px;border-radius:50%;background:var(--green);flex-shrink:0}.md.ho{background:transparent;border:1.5px solid var(--pink)}
+    .mn{font-size:0.72rem;font-weight:500}.mm{font-size:0.58rem;color:var(--t3);padding-left:1rem}
+    .tb{margin-top:auto;display:flex;justify-content:space-around;padding:0.6rem 0 0.2rem;border-top:1px solid var(--brd)}
+    .ta{font-size:0.5rem;color:var(--t3);text-align:center}.ta.ac{color:var(--acc)}
+    .ti{width:18px;height:18px;margin:0 auto 2px;border-radius:4px;background:var(--brd)}.ta.ac .ti{background:var(--acc-s)}
+    .fg{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+    .fc{background:var(--card);border:1px solid var(--brd);border-radius:16px;padding:2rem;transition:all 0.3s ease}
+    .fc:hover{background:var(--card-h);border-color:var(--brd-g);transform:translateY(-2px)}
+    .fi{width:44px;height:44px;border-radius:12px;background:var(--acc-s);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:1.2rem}
+    .fc h3{font-size:1.05rem;font-weight:600;margin-bottom:0.6rem}.fc p{font-size:0.9rem;color:var(--t2);line-height:1.6}
+    .sl{font-size:0.8rem;font-weight:500;color:var(--acc);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.75rem}
+    .st{font-size:clamp(1.8rem,3vw,2.4rem);font-weight:700;letter-spacing:-0.02em;margin-bottom:1rem}
+    .sd{font-size:1.05rem;color:var(--t2);max-width:600px;line-height:1.7}
+    .stp{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem}
+    .sp{text-align:center;padding:2rem}
+    .sn{font-family:'JetBrains Mono',monospace;font-size:3rem;font-weight:400;color:var(--acc);opacity:0.3;margin-bottom:1rem}
+    .sp h3{font-size:1.1rem;font-weight:600;margin-bottom:0.5rem}.sp p{font-size:0.9rem;color:var(--t2);line-height:1.6}
+    .lp{padding-top:8rem}.lc{max-width:720px;margin:0 auto}
+    .lc h1{font-size:2rem;font-weight:700;margin-bottom:0.5rem;letter-spacing:-0.02em}
+    .lc .lu{font-size:0.85rem;color:var(--t3);margin-bottom:2.5rem}
+    .lc h2{font-size:1.2rem;font-weight:600;margin-top:2.5rem;margin-bottom:0.75rem}
+    .lc h3{font-size:1.05rem;font-weight:600;margin-top:1.5rem;margin-bottom:0.5rem;color:var(--t1)}
+    .lc p,.lc li{font-size:0.95rem;color:var(--t2);line-height:1.75;margin-bottom:0.75rem}
+    .lc ul{list-style:none;padding-left:0}.lc ul li::before{content:'—';color:var(--acc);margin-right:0.6rem}
+    .lc a{color:var(--acc);text-decoration:none;cursor:pointer}.lc a:hover{text-decoration:underline}
+    .sc{background:var(--card);border:1px solid var(--brd);border-radius:16px;padding:2.5rem;max-width:600px;margin-top:2rem}
+    .sc a{color:var(--acc);text-decoration:none;font-weight:500}.sc a:hover{text-decoration:underline}
+    footer{padding:3rem 2rem;border-top:1px solid var(--brd)}
+    .fti{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+    .ftl{font-size:0.85rem;color:var(--t3)}
+    .fk{display:flex;gap:1.5rem}.fk a{font-size:0.85rem;color:var(--t3);text-decoration:none;transition:color 0.2s;cursor:pointer}.fk a:hover{color:var(--t2)}
+    .pg{display:none}.pg.ac{display:block}
+    .faq-section{margin-top:1.5rem}
+    .faq-section h2{font-size:1.1rem;font-weight:600;margin-top:2rem;margin-bottom:0.5rem;color:var(--acc);padding-bottom:0.3rem;border-bottom:1px solid var(--brd)}
+    .faq-item{border-bottom:1px solid var(--brd)}
+    .faq-q{display:flex;justify-content:space-between;align-items:center;padding:0.9rem 0;cursor:pointer;font-size:0.95rem;font-weight:500;color:var(--t1);gap:1rem}
+    .faq-q:hover{color:var(--acc)}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--t3);flex-shrink:0;transition:transform 0.2s}
+    .faq-item.open .faq-q::after{content:'−'}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height 0.3s ease}
+    .faq-item.open .faq-a{max-height:500px}
+    .faq-a p{font-size:0.9rem;color:var(--t2);line-height:1.7;padding:0 0 0.9rem 0;margin:0}
+    .cta-wrap{display:flex;flex-direction:column;align-items:center}
+    .scroll-hint{display:flex;flex-direction:column;align-items:center;gap:0.3rem;margin-top:2.5rem;cursor:pointer;animation:hintFade 2.5s ease-in-out infinite;color:var(--t2);transition:color 0.2s}
+    .scroll-hint:hover{color:var(--t2)}
+    .scroll-hint-text{font-size:0.85rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase}
+    .scroll-hint-arrow{animation:bounce 2s ease-in-out infinite}
+    @keyframes hintFade{0%,100%{opacity:0.5}50%{opacity:1}}
+    @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(4px)}}
+    .carousel{position:relative;display:flex;flex-direction:column;align-items:center}
+    .car-slide{display:none}
+    .car-slide.car-active{display:block}
+    .screen-img{width:280px;height:auto;border-radius:32px;box-shadow:0 20px 60px rgba(0,0,0,0.4),0 0 0 1px rgba(255,255,255,0.08)}
+    .car-dots{display:flex;gap:0.5rem;margin-top:1.2rem;justify-content:center}
+    .car-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.2);cursor:pointer;transition:all 0.2s}
+    .car-dot.car-dot-active{background:var(--blue);width:20px;border-radius:4px}
+    @media(max-width:768px){.hc{grid-template-columns:1fr;gap:3rem;text-align:center}.hero p{margin-left:auto;margin-right:auto}.fg{grid-template-columns:1fr}.stp{grid-template-columns:1fr;gap:1rem}.nk{gap:1rem}.nk a{font-size:0.8rem}.fti{flex-direction:column;gap:1rem;text-align:center}section{padding:4rem 1.5rem}.screen-img{width:240px}}
+    @media(max-width:480px){.nk{gap:0.7rem}.screen-img{width:200px}}
+  </style>
+</head>
+<body>
+<div class="amb"></div>
+<nav><div class="ni">
+  <a class="nl" href="/"><img src="app-icon.png" alt="RitLog" style="width:32px;height:32px;border-radius:8px;">RitLog</a>
+  <div class="nk">
+    <a href="/privacy.html">Privacy</a>
+    <a href="/faq.html">FAQ</a>
+    <a href="/support.html">Support</a>
+    <button class="lb" onclick="toggleLang()" id="langBtn">NL</button>
+  </div>
+</div></nav>
+<section class="lp"><div class="con"><div class="lc">
+
+  <h1 id="i-supt">Support</h1>
+  <p class="lu" id="i-subs">Hulp nodig bij RitLog? We helpen je graag.</p>
+  <div class="sc">
+    <h2 style="margin-top:0" id="i-supc">Contact</h2>
+    <p id="i-supd">Heb je een vraag, probleem of suggestie? Stuur een e-mail naar:</p>
+    <p><a href="mailto:support@ritlog.com" style="font-size:1.1rem">support@ritlog.com</a></p>
+    <p id="i-supr">We streven ernaar om binnen twee werkdagen te reageren.</p>
+  </div>
+  <h2 id="i-supa">Zie ook</h2>
+  <p><a href="/faq.html" id="i-supfl">Bekijk de veelgestelde vragen</a> — <span id="i-supfd">daar vind je antwoorden op de meest voorkomende vragen over RitLog.</span></p>
+
+</div></div></section>
+<footer><div class="fti">
+  <div class="ftl">&copy; 2026 RitLog · Jeroen Gunning</div>
+  <div class="fk">
+    <a href="/privacy.html">Privacy</a>
+    <a href="/faq.html">FAQ</a>
+    <a href="/support.html">Support</a>
+    <a href="mailto:support@ritlog.com">Contact</a>
+  </div>
+</div></footer>
+
+</body>
+</html>
