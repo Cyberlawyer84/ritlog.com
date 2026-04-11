@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script>
+// GitHub Pages SPA redirect: convert /privacy to /#/privacy
+var path = window.location.pathname;
+var page = path.replace(/^\//, '').replace(/\/$/, '');
+if (page) {
+  window.location.replace('/' + '?p=' + page);
+} else {
+  window.location.replace('/');
+}
+</script>
+</head>
+<body></body>
+</html>
