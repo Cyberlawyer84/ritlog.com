@@ -320,6 +320,7 @@ window.addEventListener('popstate',e=>{
 
 document.addEventListener('DOMContentLoaded',()=>{
   applyLang();
+  makeFaqAccordion('faq-content');
   // Handle direct URL paths
   var p=location.pathname.replace(/^\//,'').replace(/\/$/,'');
   // Handle 404 redirect via ?p= parameter
