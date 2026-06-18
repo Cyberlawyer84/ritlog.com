@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Nieuws – RitLog 2.0</title>
+  <meta name="description" content="Wat is er nieuw in RitLog 2.0? Een volledig nieuw ontwerp, widgets, fietsregistratie en nog veel meer.">
+  <meta name="theme-color" content="#f5efe4">
+  <link rel="icon" type="image/png" href="icon.png">
+  <link rel="apple-touch-icon" href="icon.png">
+  <style>
+    :root{--bg:#f5efe4;--card:#ffffff;--card-h:#fbf6ec;--brd:#e1d5c0;--brd-g:#d4c5a8;--t1:#2a2620;--t2:#6f6557;--t3:#a89c88;--acc:#2f6b4f;--acc-g:rgba(47,107,79,0.28);--acc-s:rgba(47,107,79,0.12);--green:#2f6b4f;--pink:#c07b5b;--blue:#2f6b4f;--amber:#e0982f}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--t1);line-height:1.6}
+    /* nav */
+    nav{position:sticky;top:0;z-index:100;background:rgba(245,239,228,0.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--brd);padding:.7rem 1.2rem}
+    .ni{max-width:860px;margin:auto;display:flex;align-items:center;justify-content:space-between}
+    .nl{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--t1);font-weight:700;font-size:1.05rem}
+    .nl span{letter-spacing:-.3px}
+    .nk{display:flex;align-items:center;gap:1.2rem}
+    .nk a{text-decoration:none;color:var(--t2);font-size:.9rem;transition:color .2s}
+    .nk a:hover{color:var(--acc)}
+    .nk a[href="/nieuws.html"]{color:var(--acc);font-weight:600}
+    .lb{background:var(--acc-s);border:1px solid var(--brd);color:var(--acc);padding:.25rem .7rem;border-radius:20px;cursor:pointer;font-size:.82rem;font-weight:600}
+    /* hero */
+    .hero{text-align:center;padding:3.5rem 1.5rem 2rem}
+    .badge{display:inline-block;background:var(--acc);color:#fff;font-size:.75rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:.3rem .8rem;border-radius:20px;margin-bottom:1.2rem}
+    .hero h1{font-size:clamp(1.9rem,5vw,3rem);font-weight:800;line-height:1.15;letter-spacing:-.5px;margin-bottom:.8rem}
+    .hero h1 span{background:linear-gradient(135deg,var(--acc),var(--amber));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .hero p{font-size:1.08rem;color:var(--t2);max-width:560px;margin:0 auto}
+    /* tijdlijn / feature blokken */
+    .nl-wrap{max-width:760px;margin:0 auto;padding:1rem 1.5rem 4rem}
+    .nl-item{display:grid;grid-template-columns:48px 1fr;gap:0 1.4rem;margin-bottom:2.8rem;position:relative}
+    .nl-item:not(:last-child)::before{content:'';position:absolute;left:23px;top:48px;bottom:-2.2rem;width:2px;background:var(--brd-g)}
+    .nl-icon{width:48px;height:48px;border-radius:14px;background:var(--card);border:1.5px solid var(--brd);display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative;z-index:1}
+    .nl-icon.accent{background:var(--acc);border-color:var(--acc)}
+    .nl-icon.accent svg{stroke:#fff!important}
+    .nl-body{}
+    .nl-label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--t3);margin-bottom:.2rem}
+    .nl-title{font-size:1.2rem;font-weight:700;color:var(--t1);margin-bottom:.45rem;line-height:1.25}
+    .nl-text{font-size:.97rem;color:var(--t2);line-height:1.65}
+    .nl-text strong{color:var(--t1)}
+    .nl-tag{display:inline-block;background:var(--acc-s);color:var(--acc);font-size:.72rem;font-weight:700;padding:.15rem .55rem;border-radius:10px;margin:.5rem .25rem 0 0}
+    /* CTA-balk */
+    .cta-bar{background:var(--card);border-top:1px solid var(--brd);border-bottom:1px solid var(--brd);padding:2.5rem 1.5rem;text-align:center;margin-bottom:0}
+    .cta-bar h2{font-size:1.4rem;font-weight:700;margin-bottom:.5rem}
+    .cta-bar p{color:var(--t2);margin-bottom:1.3rem;font-size:.97rem}
+    .cta-btn{display:inline-block;background:var(--acc);color:#fff;text-decoration:none;padding:.75rem 1.8rem;border-radius:14px;font-weight:700;font-size:1rem;box-shadow:0 4px 18px rgba(47,107,79,.25)}
+    /* footer */
+    footer{padding:1.5rem 1.2rem;border-top:1px solid var(--brd)}
+    .fti{max-width:860px;margin:auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;font-size:.85rem;color:var(--t3)}
+    .fk{display:flex;gap:1.2rem;flex-wrap:wrap}
+    .fk a{color:var(--t3);text-decoration:none}
+    .fk a:hover{color:var(--acc)}
+  </style>
+</head>
+<body>
+
+<nav><div class="ni">
+  <a class="nl" href="/"><img src="icon.png" alt="" style="width:30px;height:30px;border-radius:7px"><span>RitLog</span></a>
+  <div class="nk">
+    <a href="/nieuws.html">Nieuws</a>
+    <a href="/faq.html">FAQ</a>
+    <a href="/support.html">Support</a>
+    <a href="/privacy.html">Privacy</a>
+  </div>
+</div></nav>
+
+<section class="hero">
+  <div class="badge">Versie 2.0 — juni 2026</div>
+  <h1>RitLog is <span>helemaal vernieuwd</span></h1>
+  <p>Een nieuwe look, slimmere registratie en handige widgets. Dit zijn de highlights van de grootste update die RitLog ooit heeft gekregen.</p>
+</section>
+
+<div class="nl-wrap">
+
+  <!-- 1. Nieuw ontwerp -->
+  <div class="nl-item">
+    <div class="nl-icon accent">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+      </svg>
+    </div>
+    <div class="nl-body">
+      <div class="nl-label">Ontwerp</div>
+      <div class="nl-title">Warm, fris nieuw uiterlijk</div>
+      <div class="nl-text">De hele interface heeft een volledig nieuw jasje gekregen. Weg met het koude blauw — RitLog gebruikt nu een <strong>warm crème-groen palet</strong> dat prettiger aanvoelt bij dagelijks gebruik. Elke kaart, elk scherm, elk detail is opnieuw doordacht. De app past zich bovendien automatisch aan aan jouw telefooninstelling: kies voor licht, donker of laat de telefoon het zelf bepalen.</div>
+      <span class="nl-tag">Lichte modus</span><span class="nl-tag">Donkere modus</span><span class="nl-tag">Automatisch</span>
+    </div>
+  </div>
+
+  <!-- 2. Widget -->
+  <div class="nl-item">
+    <div class="nl-icon accent">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
+      </svg>
+    </div>
+    <div class="nl-body">
+      <div class="nl-label">Nieuw</div>
+      <div class="nl-title">Widget op beginscherm en vergrendelscherm</div>
+      <div class="nl-text">RitLog heeft nu <strong>widgets</strong> voor op je beginscherm — in klein, middel en groot formaat — én een widget voor op het vergrendelscherm. In één oogopslag zie je je huidige kilometerstand en het nog te declareren bedrag. En met één tik registreer je direct een nieuwe rit, zonder de app te openen. De widget past zich net als de app automatisch aan aan licht of donker.</div>
+      <span class="nl-tag">Beginscherm</span><span class="nl-tag">Vergrendelscherm</span><span class="nl-tag">Snel registreren</span>
+    </div>
+  </div>
+
+  <!-- 3. Fiets -->
+  <div class="nl-item">
+    <div class="nl-icon accent">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M15 6a1 1 0 100-2 1 1 0 000 2zm-3 11.5L9 10l-4 2 5 5.5"/><path d="M9 10l6 1 3.5-4"/>
+      </svg>
+    </div>
+    <div class="nl-body">
+      <div class="nl-label">Unieke feature</div>
+      <div class="nl-title">Ook voor de fiets</div>
+      <div class="nl-text">RitLog ondersteunt nu ook <strong>zakelijke fietsritten</strong> — iets wat je bij andere ritregistratie-apps zelden tegenkomt. Voor fietsritten registreer je de afstand in kilometers (je hebt immers geen odometer op de fiets), zodat je ook je fietskilometers fiscaal correct kunt verantwoorden tegenover de Belastingdienst. Gewoon via hetzelfde vertrouwde scherm als je autoregistraties.</div>
+      <span class="nl-tag">Fiets</span><span class="nl-tag">Afstand i.p.v. teller</span><span class="nl-tag">Uniek</span>
+    </div>
+  </div>
+
+  <!-- 4. Meerdere voertuigen -->
+  <div class="nl-item">
+    <div class="nl-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2f6b4f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+      </svg>
+    </div>
+    <div class="nl-body">
+      <div class="nl-label">Verbeterd</div>
+      <div class="nl-title">Meerdere voertuigen</div>
+      <div class="nl-text">Heb je een zakelijke auto én een privéauto (of een fiets)? Je kunt nu <strong>meerdere voertuigen</strong> aanmaken en per voertuig je ritten en kilometerstand bijhouden. Wisselen tussen voertuigen gaat met één tik vanuit het beginscherm. Alle exportoverzichten worden netjes per voertuig opgesplitst.</div>
+      <span class="nl-tag">Multi-voertuig</span><span class="nl-tag">Eenvoudig wisselen</span>
+    </div>
+  </div>
+
+  <!-- 5. Locaties + MapKit -->
+  <div class="nl-item">
+    <div class="nl-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2f6b4f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+      </svg>
+    </div>
+    <div class="nl-body">
+      <div class="nl-label">Verbeterd</div>
+      <div class="nl-title">Slimmere locaties en adressen</div>
+      <div class="nl-text">Bij het registreren van een rit stelt de app nu automatisch adressen voor op basis van je invoer — dankzij integratie met Apple Maps. Locaties die je vaker bezoekt worden herkend en <strong>automatisch gekoppeld</strong> aan je ritten. Zo hoef je het adres van je kantoor of klant maar één keer in te voeren.</div>
+      <span class="nl-tag">Apple Maps-suggesties</span><span class="nl-tag">Automatisch koppelen</span>
+    </div>
+  </div>
+
+  <!-- 6. Beginstand onboarding -->
+  <div class="nl-item">
+    <div class="nl-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2f6b4f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+    </div>
+    <div class="nl-body">
+      <div class="nl-label">Verbeterd</div>
+      <div class="nl-title">Beginstand invullen bij de start</div>
+      <div class="nl-text">Nieuw bij de eerste keer opstarten: de app vraagt je huidige kilometerstand. Daarmee klopt de administratie meteen <strong>vanaf de eerste rit</strong> — geen losse beginstand meer die je later handmatig moet rechtzetten. Vul je de stand niet in, dan geeft de app een duidelijke waarschuwing zodat je niets vergeet.</div>
+      <span class="nl-tag">Onboarding</span><span class="nl-tag">Beginstand</span>
+    </div>
+  </div>
+
+  <!-- 7. PDF export -->
+  <div class="nl-item">
+    <div class="nl-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2f6b4f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
+      </svg>
+    </div>
+    <div class="nl-body">
+      <div class="nl-label">Verbeterd</div>
+      <div class="nl-title">Betere PDF-export</div>
+      <div class="nl-text">De PDF-export toont nu alle kolommen correct en volledig — ook langere categorieën zoals "Woon-werkverkeer" worden niet meer afgekapt. Het kenteken van het voertuig staat apart vermeld per export. Zo lever je aan het einde van het jaar <strong>een overzicht dat meteen klaar is voor de boekhouder</strong>.</div>
+      <span class="nl-tag">PDF</span><span class="nl-tag">Kenteken</span><span class="nl-tag">Belastingdienst</span>
+    </div>
+  </div>
+
+  <!-- 8. Nieuw icoon -->
+  <div class="nl-item" style="margin-bottom:0">
+    <div class="nl-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2f6b4f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="3" width="18" height="18" rx="4"/><path d="M12 8v4l3 3"/>
+      </svg>
+    </div>
+    <div class="nl-body">
+      <div class="nl-label">Nieuw</div>
+      <div class="nl-title">Nieuw app-icoon</div>
+      <div class="nl-text">RitLog heeft een nieuw, fris app-icoon gekregen dat past bij het vernieuwde kleurpalet: een heldere <strong>merkgroene achtergrond</strong> met een duidelijk routesymbool. Het icoon springt eruit op je beginscherm en sluit aan bij de moderne uitstraling van de app.</div>
+      <span class="nl-tag">Nieuw icoon</span><span class="nl-tag">Merkgroen</span>
+    </div>
+  </div>
+
+</div>
+
+<section class="cta-bar">
+  <h2>Klaar om te beginnen?</h2>
+  <p>Download RitLog gratis in de App Store en houd je zakelijke ritten bij — correct, overzichtelijk en fiscaal verantwoord.</p>
+  <a class="cta-btn" href="https://apps.apple.com/nl/app/ritlog/id6743561539">Download in de App Store</a>
+</section>
+
+<footer><div class="fti">
+  <div class="ftl">&copy; 2026 RitLog &middot; Jeroen Gunning</div>
+  <div class="fk">
+    <a href="/nieuws.html">Nieuws</a>
+    <a href="/privacy.html">Privacy</a>
+    <a href="/faq.html">FAQ</a>
+    <a href="/support.html">Support</a>
+    <a href="mailto:support@ritlog.com">Contact</a>
+  </div>
+</div></footer>
+
+</body>
+</html>
