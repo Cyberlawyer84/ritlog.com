@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://ritlog.com/</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ritlog.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ritlog.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritlog.com/"/>
+  </url>
+  <url>
+    <loc>https://ritlog.com/en/</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ritlog.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ritlog.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritlog.com/"/>
+  </url>
+  <url>
+    <loc>https://ritlog.com/faq.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ritlog.com/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ritlog.com/en/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritlog.com/faq.html"/>
+  </url>
+  <url>
+    <loc>https://ritlog.com/en/faq.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ritlog.com/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ritlog.com/en/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritlog.com/faq.html"/>
+  </url>
+  <url>
+    <loc>https://ritlog.com/nieuws.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ritlog.com/nieuws.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ritlog.com/en/news.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritlog.com/nieuws.html"/>
+  </url>
+  <url>
+    <loc>https://ritlog.com/en/news.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ritlog.com/nieuws.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ritlog.com/en/news.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritlog.com/nieuws.html"/>
+  </url>
+  <url>
+    <loc>https://ritlog.com/privacy.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ritlog.com/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ritlog.com/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritlog.com/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://ritlog.com/en/privacy.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ritlog.com/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ritlog.com/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritlog.com/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://ritlog.com/support.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ritlog.com/support.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ritlog.com/en/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritlog.com/support.html"/>
+  </url>
+  <url>
+    <loc>https://ritlog.com/en/support.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ritlog.com/support.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ritlog.com/en/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritlog.com/support.html"/>
+  </url>
+</urlset>
