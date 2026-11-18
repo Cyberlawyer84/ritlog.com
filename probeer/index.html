@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Probeer RitLog — RitLog</title>
+  <meta name="description" content="Klik door RitLog alsof je de app in je hand hebt: van de melding bij aankomst tot de export voor de aangifte. Met voorbeeldgegevens.">
+  <meta name="theme-color" content="#f5efe4">
+  <link rel="canonical" href="https://ritlog.com/probeer/">
+  <link rel="alternate" hreflang="nl" href="https://ritlog.com/probeer/">
+  <link rel="alternate" hreflang="en" href="https://ritlog.com/en/try/">
+  <link rel="alternate" hreflang="x-default" href="https://ritlog.com/probeer/">
+  <link rel="icon" type="image/png" href="/icon.png?v=3">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=3">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/demo/demo.css">
+  <style>
+    /* Menu zoals op de rest van de site */
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 2rem;background:rgba(245,239,228,0.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--brd)}
+    .ni{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+    .nl{font-size:1.25rem;font-weight:700;letter-spacing:-0.02em;color:var(--t1);text-decoration:none;display:flex;align-items:center;gap:0.5rem}
+    .nk{display:flex;gap:1.5rem;align-items:center}
+    .nk a{color:var(--t2);text-decoration:none;font-size:0.9rem;transition:color 0.2s}
+    .nk a:hover,.nk a[aria-current]{color:var(--t1)}
+    .lb{color:var(--t3);font-size:0.8rem;padding:0.3rem 0.7rem;border:1px solid var(--brd);border-radius:6px}
+    @media(max-width:768px){.nk{gap:1rem}.nk a{font-size:0.8rem}}
+    @media(max-width:600px){nav{padding:0.7rem 1rem}.ni{flex-direction:column;gap:0.45rem}.nk{flex-wrap:wrap;justify-content:center;gap:0.35rem 0.9rem}.nk a{white-space:nowrap;font-size:0.82rem}}
+    /* Ruimte voor het menu */
+    :root{--w:min(340px, calc((100svh - 210px) * 402 / 874), calc(100vw - 72px))}
+    .wrap{padding-top:92px}
+    @media(max-width:600px){.wrap{padding-top:120px}}
+    .store{display:inline-flex;align-items:center;gap:0.5rem;margin:0 0 20px;padding:0.75rem 1.4rem;background:var(--acc);color:#fff;text-decoration:none;border-radius:12px;font-weight:600;font-size:0.95rem;box-shadow:0 4px 20px rgba(47,107,79,0.28)}
+    .store:hover{transform:translateY(-1px)}
+  </style>
+</head>
+<body data-scr="/demo/scr/nl/">
+<nav><div class="ni">
+  <a class="nl" href="/"><img src="/icon.png" alt="" style="width:30px;height:30px;border-radius:7px"><span>RitLog</span></a>
+  <div class="nk">
+    <a href="/probeer/" aria-current="page">Probeer</a>
+    <a href="/privacy.html">Privacy</a>
+    <a href="/nieuws.html">Nieuws</a>
+    <a href="/faq.html">FAQ</a>
+    <a href="/support.html">Support</a>
+    <a href="https://appsvooradvocaten.nl">Andere apps</a>
+    <a class="lb" href="/en/try/" hreflang="en">EN</a>
+  </div>
+</div></nav>
+
+<main class="wrap">
+  <div class="stage">
+    <div class="phone">
+      <div class="screen" id="screen" aria-live="polite">
+        <div class="island" aria-hidden="true"></div>
+        <div class="notif" id="notif" role="button" tabindex="-1" aria-label="Melding: Rit registreren? Tik om te openen">
+          <img src="/icon.png" alt="">
+          <div class="tx">
+            <div class="top"><b>Rit registreren?</b><span class="tm">nu</span></div>
+            Je bent aangekomen bij Gerechtshof Arnhem-Leeuwarden. Wil je een rit registreren?
+          </div>
+        </div>
+        <div class="ring" id="ring"></div>
+      </div>
+    </div>
+    <p class="caption" id="cap"></p>
+    <button class="reset" id="reset" type="button">↺ Opnieuw beginnen</button>
+  </div>
+
+  <div class="side">
+    <h1>Probeer RitLog</h1>
+    <p class="lead">Klik door de app alsof je hem in je hand hebt. Invullen hoeft niet: de demo doet het voor je.</p>
+    <ol class="steps" id="steps">
+      <li><button type="button" data-go="aankomst"><span class="n">1</span>Je komt aan</button></li>
+      <li><button type="button" data-go="rit-0"><span class="n">2</span>Rit invullen</button></li>
+      <li><button type="button" data-go="rit-2"><span class="n">3</span>Opslaan</button></li>
+      <li><button type="button" data-go="ritten"><span class="n">4</span>Je ritten</button></li>
+      <li><button type="button" data-go="exp-pdf"><span class="n">5</span>Exporteren</button></li>
+      <li><button type="button" data-go="inzicht"><span class="n">6</span>Inzicht</button></li>
+    </ol>
+    <a class="store" href="https://apps.apple.com/nl/app/ritlog/id6759204586"><svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M15.48 10.62c-.02-2.03 1.66-3.01 1.74-3.06-0.95-1.39-2.43-1.58-2.95-1.6-1.26-.13-2.45.74-3.09.74-.64 0-1.62-.72-2.66-.7-1.37.02-2.63.8-3.34 2.02-1.42 2.47-.36 6.13 1.02 8.14.68.98 1.48 2.08 2.54 2.04 1.02-.04 1.4-.66 2.63-.66 1.23 0 1.57.66 2.64.64 1.09-.02 1.78-1 2.45-1.98.77-1.13 1.09-2.23 1.1-2.29-.02-.01-2.11-.81-2.13-3.22zM13.47 4.66c.56-.68.94-1.62.83-2.56-.81.03-1.79.54-2.37 1.21-.52.6-.98 1.56-.85 2.48.9.07 1.82-.46 2.39-1.13z"/></svg><span>Download in de App Store</span></a>
+    <p class="note">Demo met voorbeeldgegevens. In de echte app vul je zelf in, of neemt RitLog het over van je vorige rit en de route.</p>
+  </div>
+</main>
+<script src="/demo/demo.js"></script>
+</body>
+</html>
