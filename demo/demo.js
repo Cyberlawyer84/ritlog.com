@@ -106,7 +106,7 @@
     },
     pdf: {
       img: 'pdf', step: 5,
-      cap: t('Een nette rittenregistratie, klaar voor de aangifte. Tik linksboven om terug te gaan.', 'A tidy trip log, ready for your tax return. Tap the top left to go back.'),
+      cap: t('Een nette rittenregistratie als PDF-export. Tik linksboven om terug te gaan.', 'A tidy trip log as a PDF export. Tap the top left to go back.'),
       hot: [
         { r: [0, 28, 80, 54], go: 'ritten', tr: 'fade', label: t('Terug naar RitLog', 'Back to RitLog') },
         { r: [68, 60, 120, 110], go: 'ritten', tr: 'fade', label: t('Terug', 'Back') },
