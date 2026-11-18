@@ -169,7 +169,7 @@
       return;
     }
     screen.insertBefore(img, island);
-    const cls = { fade: 'in-fade', sheet: 'in-sheet', scrollup: 'in-scrollup', scrolldown: 'in-scrolldown' }[tr];
+    const cls = { fade: 'in-fade', type: 'in-type', sheet: 'in-sheet', scrollup: 'in-scrollup', scrolldown: 'in-scrolldown' }[tr];
     if (cls) {
       img.classList.add(cls);
       const done = () => { old.forEach(o => o.remove()); img.classList.remove(cls); };
@@ -226,7 +226,7 @@
         if (what === '@tap') return tapAt(extra[0], extra[1]);
         const last = what === seq[seq.length - 1][0];
         if (last) { busy = false; go(what, 'fade'); return; }
-        setImage(what);
+        setImage(what, 'type');
         if (extra) cap.textContent = extra;
       }, t);
     });

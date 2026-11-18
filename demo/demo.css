@@ -35,15 +35,13 @@ body{margin:0;background:var(--bg);color:var(--t1);font-family:'DM Sans',-apple-
 
 /* overgangen */
 .in-fade{animation:inFade .22s ease-out both}
-.in-sheet{animation:inSheet .38s cubic-bezier(.2,.8,.2,1) both}
-.out-sheet{animation:outSheet .32s cubic-bezier(.4,0,.6,1) both;z-index:2}
-.in-scrollup{animation:inScrollUp .35s ease-out both}
-.in-scrolldown{animation:inScrollDown .35s ease-out both}
+.in-type{animation:inFade .14s linear both}
+.in-sheet{animation:inFade .28s ease-out both}
+.out-sheet{animation:outFade .26s ease-in both;z-index:2}
+.in-scrollup{animation:inFade .25s ease-out both}
+.in-scrolldown{animation:inFade .25s ease-out both}
 @keyframes inFade{from{opacity:0}}
-@keyframes inSheet{from{opacity:.2;transform:translateY(24%)}}
-@keyframes outSheet{to{opacity:0;transform:translateY(24%)}}
-@keyframes inScrollUp{from{opacity:0;transform:translateY(10%)}}
-@keyframes inScrollDown{from{opacity:0;transform:translateY(-10%)}}
+@keyframes outFade{to{opacity:0}}
 
 /* melding */
 .notif{position:absolute;z-index:6;left:calc(var(--w) * 9 / 402);right:calc(var(--w) * 9 / 402);top:calc(var(--w) * 58 / 402);
@@ -84,7 +82,7 @@ body{margin:0;background:var(--bg);color:var(--t1);font-family:'DM Sans',-apple-
   .note{display:none}
 }
 @media (prefers-reduced-motion:reduce){
-  .in-fade,.in-sheet,.out-sheet,.in-scrollup,.in-scrolldown{animation-duration:.01s}
+  .in-fade,.in-type,.in-sheet,.out-sheet,.in-scrollup,.in-scrolldown{animation-duration:.01s}
   .notif{transition:opacity .2s}
 }
 .note.lang{margin-top:12px}
