@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Nieuws – RitLog 2.0</title>
-  <meta name="description" content="Wat is er nieuw in RitLog 2.0? Een volledig nieuw ontwerp, widgets, fietsregistratie en nog veel meer.">
+  <title>Nieuws – RitLog 2.2</title>
+  <meta name="description" content="Wat is er nieuw in RitLog 2.2? Kilometervergoeding 2026 (€ 0,25 per km), een extra grote widget, de iPhone Duo en een volledige back-up.">
   <link rel="alternate" hreflang="nl" href="https://ritlog.com/nieuws.html">
   <link rel="alternate" hreflang="en" href="https://ritlog.com/en/news.html">
   <link rel="alternate" hreflang="x-default" href="https://ritlog.com/nieuws.html">
@@ -54,6 +54,15 @@
     .fk{display:flex;gap:1.2rem;flex-wrap:wrap}
     .fk a{color:var(--t3);text-decoration:none}
     .fk a:hover{color:var(--acc)}
+    /* video + versiekop */
+    .vid-wrap{max-width:760px;margin:1.6rem auto 0;border-radius:18px;overflow:hidden;box-shadow:0 24px 60px -20px rgba(42,38,32,.4),0 4px 14px rgba(42,38,32,.1);background:#ece4d6;aspect-ratio:16/9}
+    .vid-wrap video{width:100%;height:100%;display:block}
+    .vid-note{font-size:.85rem;color:var(--t3);margin-top:.7rem}
+    .era{max-width:760px;margin:0 auto;padding:2.5rem 1.5rem 1rem;border-top:1px solid var(--brd);text-align:center}
+    .era .badge{background:var(--card);color:var(--t2);border:1px solid var(--brd)}
+    .era h2{font-size:clamp(1.5rem,3.5vw,2rem);font-weight:800;letter-spacing:-.4px;margin-bottom:.6rem}
+    .era h2 span{background:linear-gradient(135deg,var(--acc),var(--amber));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .era p{color:var(--t2);max-width:560px;margin:0 auto}
   </style>
 <style id="nav-mobile">@media(max-width:600px){nav{padding:0.7rem 1rem}.ni{flex-direction:column;gap:0.45rem}.nk{flex-wrap:wrap;justify-content:center;gap:0.35rem 0.9rem}.nk a{white-space:nowrap;font-size:0.82rem}}</style>
 </head>
@@ -73,8 +82,81 @@
 </div></nav>
 
 <section class="hero">
+  <div class="badge">Versie 2.2 — november 2026</div>
+  <h1>RitLog <span>2.2</span> is er</h1>
+  <p>Het nieuwe tarief van € 0,25 per kilometer, een extra grote widget, de iPhone Duo en een volledige back-up. Bekijk in een minuut wat er nieuw is.</p>
+  <div class="vid-wrap"><video controls playsinline preload="none" poster="/beelden/ritlog-promo.jpg" aria-label="Video: zo werkt RitLog 2.2 (1 minuut, met ondertiteling)">
+    <source src="/beelden/ritlog-promo.mp4" type="video/mp4">
+  </video></div>
+</section>
+
+<div class="nl-wrap">
+
+  <div class="nl-item">
+    <div class="nl-icon accent">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 7a7 7 0 1 0 0 10"/><path d="M4 10h10M4 14h10"/></svg>
+    </div>
+    <div class="nl-body">
+      <div class="nl-label">Belangrijk</div>
+      <div class="nl-title">Kilometervergoeding 2026: € 0,25 per km</div>
+      <div class="nl-text">Vanaf 1 januari 2026 is de onbelaste kilometervergoeding <strong>€ 0,25 per kilometer</strong>. RitLog stelt per voertuig voor om dit tarief in te stellen. Ritten tot en met 2025 blijven gewoon op € 0,23: de app rekent elke rit met het tarief dat op die datum gold, ook in je exports en in het jaarbedrag op het beginscherm.</div></div>
+  </div>
+
+  <div class="nl-item">
+    <div class="nl-icon accent">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 8h6M7 12h10M7 16h8"/></svg>
+    </div>
+    <div class="nl-body">
+      <div class="nl-label">Nieuw</div>
+      <div class="nl-title">Extra grote widget</div>
+      <div class="nl-text">Op iOS 27 zet je RitLog nu ook als <strong>extra grote widget</strong> op je beginscherm: je kilometerstand, de verdeling tussen zakelijk, woon-werk en privé, en je laatste ritten. Alles in één oogopslag, zonder de app te openen.</div></div>
+  </div>
+
+  <div class="nl-item">
+    <div class="nl-icon accent">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M12 5v14"/></svg>
+    </div>
+    <div class="nl-body">
+      <div class="nl-label">Nieuw</div>
+      <div class="nl-title">Gemaakt voor de iPhone Duo</div>
+      <div class="nl-text">Vouw je de <strong>iPhone Duo</strong> open, dan gebruikt RitLog het hele grote scherm. Home staat in twee kolommen, je ritten met de details ernaast, en Inzicht is netjes verdeeld rond de vouw.</div></div>
+  </div>
+
+  <div class="nl-item">
+    <div class="nl-icon accent">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/><path d="M12 8v4l3 2"/></svg>
+    </div>
+    <div class="nl-body">
+      <div class="nl-label">Nieuw</div>
+      <div class="nl-title">Volledige back-up en terugzetten</div>
+      <div class="nl-text">Naast de CSV-bestanden per kwartaal bewaart RitLog nu ook een <strong>volledige kopie van al je gegevens</strong> in de map die je zelf kiest, bijvoorbeeld in iCloud Drive. Daarmee zet je alles terug op een nieuwe iPhone. En het terugzetten zelf kun je ook weer ongedaan maken.</div></div>
+  </div>
+
+  <div class="nl-item">
+    <div class="nl-icon accent">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/><path d="M8 14h8M8 17h5"/></svg>
+    </div>
+    <div class="nl-body">
+      <div class="nl-label">Nieuw</div>
+      <div class="nl-title">Kosten exporteren en ritten verplaatsen</div>
+      <div class="nl-text">Exporteer je tankbeurten, laadbeurten en overige kosten als <strong>CSV voor je boekhouder</strong>. En heb je een rit bij het verkeerde voertuig gezet? Verplaats hem naar een ander voertuig van dezelfde soort.</div></div>
+  </div>
+
+  <div class="nl-item" style="margin-bottom:0">
+    <div class="nl-icon accent">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+    </div>
+    <div class="nl-body">
+      <div class="nl-label">Verbeterd</div>
+      <div class="nl-title">Betrouwbaarder en beter leesbaar</div>
+      <div class="nl-text">Herinneringen bij aankomst en vertrek zijn <strong>betrouwbaarder</strong>, en RitLog waarschuwt als "Nauwkeurige locatie" uit staat. Bij het invullen van een rit controleert de app de kilometerstand op de gekozen datum. De PDF-export volgt de taal van de app, de app schaalt mee met grotere tekst en werkt beter met VoiceOver. Plus veel kleine verbeteringen.</div></div>
+  </div>
+
+</div>
+
+<section class="era">
   <div class="badge">Versie 2.0 — juni 2026</div>
-  <h1>RitLog is <span>helemaal vernieuwd</span></h1>
+  <h2>RitLog is <span>helemaal vernieuwd</span></h2>
   <p>Een nieuwe look, slimmere registratie en handige widgets. Dit zijn de highlights van de grootste update die RitLog ooit heeft gekregen.</p>
 </section>
 

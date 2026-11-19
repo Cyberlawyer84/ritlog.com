@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>News – RitLog 2.0</title>
-  <meta name="description" content="What's new in RitLog 2.0? A completely new design, widgets, bike trip logging and much more.">
+  <title>News – RitLog 2.2</title>
+  <meta name="description" content="What's new in RitLog 2.2? The 2026 mileage rate (€0.25 per km), an extra large widget, iPhone Duo support and a full backup.">
   <link rel="canonical" href="https://ritlog.com/en/news.html">
   <link rel="alternate" hreflang="nl" href="https://ritlog.com/nieuws.html">
   <link rel="alternate" hreflang="en" href="https://ritlog.com/en/news.html">
@@ -55,6 +55,15 @@
     .fk{display:flex;gap:1.2rem;flex-wrap:wrap}
     .fk a{color:var(--t3);text-decoration:none}
     .fk a:hover{color:var(--acc)}
+    /* video + versiekop */
+    .vid-wrap{max-width:760px;margin:1.6rem auto 0;border-radius:18px;overflow:hidden;box-shadow:0 24px 60px -20px rgba(42,38,32,.4),0 4px 14px rgba(42,38,32,.1);background:#ece4d6;aspect-ratio:16/9}
+    .vid-wrap video{width:100%;height:100%;display:block}
+    .vid-note{font-size:.85rem;color:var(--t3);margin-top:.7rem}
+    .era{max-width:760px;margin:0 auto;padding:2.5rem 1.5rem 1rem;border-top:1px solid var(--brd);text-align:center}
+    .era .badge{background:var(--card);color:var(--t2);border:1px solid var(--brd)}
+    .era h2{font-size:clamp(1.5rem,3.5vw,2rem);font-weight:800;letter-spacing:-.4px;margin-bottom:.6rem}
+    .era h2 span{background:linear-gradient(135deg,var(--acc),var(--amber));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .era p{color:var(--t2);max-width:560px;margin:0 auto}
   </style>
 <style id="nav-mobile">@media(max-width:600px){nav{padding:0.7rem 1rem}.ni{flex-direction:column;gap:0.45rem}.nk{flex-wrap:wrap;justify-content:center;gap:0.35rem 0.9rem}.nk a{white-space:nowrap;font-size:0.82rem}}</style>
 </head>
@@ -74,8 +83,82 @@
 </div></nav>
 
 <section class="hero">
+  <div class="badge">Version 2.2 — November 2026</div>
+  <h1>RitLog <span>2.2</span> is here</h1>
+  <p>The new rate of €0.25 per kilometre, an extra large widget, iPhone Duo support and a full backup. See what's new in one minute.</p>
+  <div class="vid-wrap"><video controls playsinline preload="none" poster="/beelden/ritlog-promo.jpg" aria-label="Video: RitLog 2.2 in one minute (in Dutch, with Dutch subtitles)">
+    <source src="/beelden/ritlog-promo.mp4" type="video/mp4">
+  </video></div>
+  <p class="vid-note">The video is in Dutch.</p>
+</section>
+
+<div class="nl-wrap">
+
+  <div class="nl-item">
+    <div class="nl-icon accent">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 7a7 7 0 1 0 0 10"/><path d="M4 10h10M4 14h10"/></svg>
+    </div>
+    <div class="nl-body">
+      <div class="nl-label">Important</div>
+      <div class="nl-title">2026 mileage rate: €0.25 per km</div>
+      <div class="nl-text">From 1 January 2026 the tax-free mileage allowance in the Netherlands is <strong>€0.25 per kilometre</strong>. RitLog suggests setting this rate for each vehicle. Trips up to and including 2025 stay at €0.23: the app uses the rate that applied on each trip's date, in your exports and in the yearly amount on the Home screen too.</div></div>
+  </div>
+
+  <div class="nl-item">
+    <div class="nl-icon accent">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 8h6M7 12h10M7 16h8"/></svg>
+    </div>
+    <div class="nl-body">
+      <div class="nl-label">New</div>
+      <div class="nl-title">Extra large widget</div>
+      <div class="nl-text">On iOS 27 you can now add RitLog as an <strong>extra large widget</strong> to your Home Screen: your odometer, the split between business, commuting and private, and your latest trips. All at a glance, without opening the app.</div></div>
+  </div>
+
+  <div class="nl-item">
+    <div class="nl-icon accent">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M12 5v14"/></svg>
+    </div>
+    <div class="nl-body">
+      <div class="nl-label">New</div>
+      <div class="nl-title">Made for iPhone Duo</div>
+      <div class="nl-text">Unfold your <strong>iPhone Duo</strong> and RitLog uses the full large screen. Home shows two columns, your trips appear with their details alongside, and Insights is neatly split around the fold.</div></div>
+  </div>
+
+  <div class="nl-item">
+    <div class="nl-icon accent">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/><path d="M12 8v4l3 2"/></svg>
+    </div>
+    <div class="nl-body">
+      <div class="nl-label">New</div>
+      <div class="nl-title">Full backup and restore</div>
+      <div class="nl-text">Alongside the quarterly CSV files, RitLog now keeps a <strong>complete copy of all your data</strong> in a folder you choose, for example in iCloud Drive. Use it to restore everything on a new iPhone. And a restore can be undone too.</div></div>
+  </div>
+
+  <div class="nl-item">
+    <div class="nl-icon accent">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/><path d="M8 14h8M8 17h5"/></svg>
+    </div>
+    <div class="nl-body">
+      <div class="nl-label">New</div>
+      <div class="nl-title">Export expenses and move trips</div>
+      <div class="nl-text">Export your fill-ups, charging sessions and other costs as <strong>CSV for your accountant</strong>. Logged a trip on the wrong vehicle? Move it to another vehicle of the same type.</div></div>
+  </div>
+
+  <div class="nl-item" style="margin-bottom:0">
+    <div class="nl-icon accent">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+    </div>
+    <div class="nl-body">
+      <div class="nl-label">Improved</div>
+      <div class="nl-title">More reliable and easier to read</div>
+      <div class="nl-text">Arrival and departure reminders are <strong>more reliable</strong>, and RitLog warns you when "Precise Location" is off. When you enter a trip, the app checks the odometer for the chosen date. PDF exports follow the app language, the app scales with larger text and works better with VoiceOver. Plus many small improvements.</div></div>
+  </div>
+
+</div>
+
+<section class="era">
   <div class="badge">Version 2.0 — June 2026</div>
-  <h1>RitLog is <span>completely redesigned</span></h1>
+  <h2>RitLog is <span>completely redesigned</span></h2>
   <p>A new look, smarter logging and handy widgets. These are the highlights of the biggest update RitLog has ever had.</p>
 </section>
 
